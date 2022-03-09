@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product APP POO</title>
+    <!--bootstrap cdn-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+</head>
+<body>
+    <!--navegacion-->
+<nav class="navbar navbar-light bg-light">
+    <a href="/" class="navbar-brand">ProductsAPP</a>
+</nav>
+
+<div class="container">
+    <!--Application-->
+    <div id="App" class="row pt-5"> 
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Add A Product</h4>
+                </div>
+                <!--Form-->
+            <form id="product-form" class="card-body">
+                <div class="form-group"> <!--form group me separa los input, asi qno quedan pegados-->
+                <input type="text" id="name" placeholder="Product Name" class="form-control"  autocomplete="off">
+                </div>
+        
+                <div class="form-group">
+                <input type="number" step="0.01" id="price" placeholder="Product Price" class="form-control">
+                </div> <!--el step me permite ingresar num decimales-->
+        
+            <div class="form-group">
+                <input type="number" id="year" min="2010" value="2020" placeholder="Year Product" class="form-control" autocomplete="off">
+            </div> <!--value año x defecto que figura, y el min es limite de año-->
+                <input type="submit" value="Save" class="btn btn-primary btn-block"><!--valor para guardar, clases para que ocupe el ancho del form-->
+            </form> <!--Reemplace el action x id, a que no voy a enviar anda a un servidor, manejare todo en el mism obrowser-->
+        </div>
+    </div>
+
+    <div id="product-list" class="col-md-8"></div>  <!--el resto ocupa las 8 columnas, para enlistar los productos-->
+</div>
+</div>
+
+<script src="./app.js" type="module"></script>
+</body>
+</html>
